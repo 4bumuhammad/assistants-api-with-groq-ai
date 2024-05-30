@@ -187,3 +187,31 @@ Open Terminal and commands
 
   {"reply":"Berikut adalah bahan-bahan yang diperlukan untuk memasak nasi goreng yang enak:\n\nBahan:\n\n* 2 cup nasi putih yang sudah disimpan sebelumnya\n* 1 telur ayam\n* 1 buah wortel, cacah\n* 1 siung bawang bombay, cacah\n* 1 siung bawang merah, cacah\n* 2 tangkai seledri, cacah\n* 1 sdt garam\n* 1/2 sdt lada bubuk\n* 1 sdt kecap ikan\n* 1 sdt minyak wijen\n* 1 sdm margarine\n* 1 sdm minyak goreng\n* Gula pasir secukupnya\n* Pepaya yang telah disimpan sebelumnya (bisa dihilangkan jika tidak suka)\n\nInstruksi:\n\n1. Panaskan minyak goreng dalam wajan dengan api sedang.\n2. Tumis bawang bombay dan bawang merah hingga layu dan harum.\n3. Tambahkan wortel, seledri, garam, lada, dan kecap ikan. Aduk rata.\n4. Tambahkan nasi putih, telur ayam, dan gula pasir. Aduk hingga rata.\n5. Tambahkan margarine dan minyak wijen. Aduk hingga rata.\n6. Masak hingga nasi goreng tersebut jadi, serta korek dengan gurih.\n7. Hidangkan panas-panas atau dingin dengan pepaya yang telah disimpan sebelumnya.\n\nDemikian, nasi goreng yang enak dan nikmat sudah siap. Bon appetit!","summary":"This conversation is an exchange between a user (using a Indonesian phrase) and a language model (AI) to provide ingredients and recipe for a delicious fried rice dish (Nasi Goreng). The AI responds with a list of ingredients and a step-by-step cooking instruction in Indonesian. The ingredients include cooked white rice, egg, carrot, onions, garlic, scallions, salt, black pepper, fish sauce, sesame oil, margarine, vegetable oil, and sugar. The cooking steps involve pan-frying the onions and garlic, then adding the carrots, scallions, salt, and black pepper. The cooked rice, egg, and sugar are then added and mixed well. Finally, margarine and sesame oil are added, and the dish is cooked until flavorful and served hot or cold, optionally topped with pickled papaya."}
 </pre>
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+---
+
+&nbsp;
+
+<div align="center">
+    <img src="./gambar-petunjuk/well_done.png" alt="well_done" style="display: block; margin: 0 auto;">
+</div> 
+
+&nbsp;
+
+---
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
