@@ -1,4 +1,4 @@
-# Create a super fast AI assistant with Groq (Without a database)
+## Create a super fast AI assistant with Groq (Without a database)
 
 &nbsp;
 
