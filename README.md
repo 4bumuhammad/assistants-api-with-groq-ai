@@ -54,6 +54,100 @@ Create a new .env file. Add your Groq API key in this file like this:
 GROQ_API_KEY=YOUR_GROQ_API_KEY
 ```
 
+## Code
+
+<pre>
+  ❯ vim index.js
+
+
+      const express = require('express');
+      const cors = require('cors')
+
+      const app = express();
+      app.use(express.json());
+      app.use(cors()) 
+      const port = 3000
+
+      require("dotenv").config();
+      const { GROQ_API_KEY } = process.env;
+
+      // GROQ Setup
+      const Groq = require("groq-sdk");
+      const groq = new Groq({
+          apiKey: GROQ_API_KEY
+      });
+
+      async function chatWithGroq(userMessage, latestReply, messageHistory) {
+          let messages = [{
+              role: "user",
+              content: userMessage
+          }]
+
+          if(messageHistory != '') {
+              messages.unshift({
+                  role: "system",
+                  content: `Our conversation's summary so far: """${messageHistory}""". 
+                          And this is the latest reply from you """${latestReply}"""`
+              })
+          }
+
+          console.log('original message', messages)
+
+          const chatCompletion = await groq.chat.completions.create({
+              messages,
+              model: "llama3-8b-8192"
+          });
+
+          const respond = chatCompletion.choices[0]?.message?.content || ""
+          return respond
+      }
+
+      async function summarizeConversation(message, reply, messageSummary) {
+          let content = `Summarize this conversation 
+                          user: """${message}""",
+                          you(AI): """${reply}"""
+                        `
+          // For N+1 message
+          if(messageSummary != '') {
+              content = `Summarize this conversation: """${messageSummary}"""
+                          and last conversation: 
+                          user: """${message}""",
+                          you(AI): """${reply}"""
+          }
+
+          const chatCompletion = await groq.chat.completions.create({
+              messages: [
+                  {
+                      role: "user",
+                      content: content
+                  }
+              ],
+              model: "llama3-8b-8192"
+          });
+
+          const summary = chatCompletion.choices[0]?.message?.content || ""
+          console.log('summary: ', summary)
+          return summary
+      }
+
+      app.post('/chat', async (req, res) => {
+          const { message, latestReply, messageSummary } = req.body;
+
+          console.log('message from client: ', message)
+          const reply = await chatWithGroq(message, latestReply, messageSummary)
+          const summary = await summarizeConversation(message, reply, messageSummary)
+          res.send({
+              reply,
+              summary
+          })
+      })
+
+      app.listen(port, () => {
+        console.log(`Example app listening on port ${port}`)
+      })
+</pre>
+
+
 &nbsp;
 
 ## Run
