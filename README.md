@@ -11,6 +11,36 @@ Reference : <br />
 
 &nbsp;
 
+## &#x1F530; Installing Multiple Versions of Node.js Using nvm
+
+<pre>
+    ❯ nvm install 20.13.1
+
+        Downloading and installing node v20.13.1...
+        Downloading https://nodejs.org/dist/v20.13.1/node-v20.13.1-darwin-arm64.tar.xz...
+        ############################################################################################################################################################################################################### 100.0%
+        Computing checksum with sha256sum
+        Checksums matched!
+        Now using node v20.13.1 (npm v10.5.2)
+    
+    # or
+    ❯ nvm use v20.13.1
+      Now using node v20.13.1 (npm v10.5.2)
+
+    ❯ nvm list
+
+            v14.17.3
+            v16.14.2
+            v18.17.0
+        ->     v20.13.1
+
+
+    ❯ node --version
+        v20.13.1
+</pre>
+
+&nbsp; 
+
 ## Install dependencies
 ```bash
   ❯ npm i cors express groq-sdk dotenv --save
