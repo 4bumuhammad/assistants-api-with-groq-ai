@@ -54,6 +54,10 @@ Create a new .env file. Add your Groq API key in this file like this:
 GROQ_API_KEY=YOUR_GROQ_API_KEY
 ```
 
+&nbsp;
+
+&nbsp;
+
 ## Code
 
 <pre>
